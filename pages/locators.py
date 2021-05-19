@@ -15,6 +15,6 @@ class AddProduct:
     ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
     PRICE = (By.CSS_SELECTOR, "div.product_main .price_color")
     TITLE = (By.CSS_SELECTOR, "div.product_main h1")
-    MESSAGE_ABOUT_ADD = (By.CSS_SELECTOR, "div.alertinner")
+    MESSAGE_ABOUT_ADD = (By.CSS_SELECTOR, "div.alertinner strong")
     BASKET_TOTAL = (By.CSS_SELECTOR, "div.alert.alert-info strong")
 

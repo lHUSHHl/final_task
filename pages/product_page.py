@@ -21,7 +21,8 @@ class ProductPage(BasePage):
         product_name = self.browser.find_element(*AddProduct.TITLE).text
         message_about_add = self.browser.find_element(*AddProduct.MESSAGE_ABOUT_ADD).text
 
-        assert product_name in message_about_add, f'expected {product_name} in message'
+        assert product_name == message_about_add, f'expected {product_name} in message, ' \
+                                                  f'received {message_about_add}'
 
     def should_be_price(self):
         self.is_element_present(*AddProduct.PRICE), \
