@@ -11,7 +11,3 @@ class MainPage(BasePage):
         assert self.is_element_present(
             *MainPageLocators.LOGIN_LINK), \
             "login link is not presented"
-
-    # def go_to_product_page(self):
-    #     link = self.browser.find_element(*AddProduct.ADD_TO_BASKET_FORM)
-    #     link.click()
