@@ -1,5 +1,5 @@
 import pytest
-from .pages.product_page import ProductPage
+from ..pages.product_page import ProductPage
 
 
 @pytest.mark.xfail()
@@ -10,5 +10,4 @@ def test_message_disappeared(browser):
     page.open()
     page.should_be_add_form()
     page.add_to_basket()
-    page.should_disappear()
-
+    page.should_not_be_success_message()

@@ -13,14 +13,14 @@ class ProductPage(BasePage):
         add_button.click()
 
     def should_be_message_about_add(self):
-        self.is_element_present(*ProductPageLocators.TITLE), \
+        self.is_element_present(*ProductPageLocators.PRODUCT_NAME), \
         "product name is not presented"
 
         self.is_element_present(*ProductPageLocators.MESSAGE_ABOUT_ADD), \
         "message is not presented"
 
         product_name = self.browser.find_element(
-            *ProductPageLocators.TITLE).text
+            *ProductPageLocators.PRODUCT_NAME).text
         message_about_add = self.browser.find_element(
             *ProductPageLocators.MESSAGE_ABOUT_ADD).text
 
