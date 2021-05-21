@@ -5,7 +5,7 @@ from .locators import ProductPageLocators
 class ProductPage(BasePage):
     def should_be_add_form(self):
         self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_FORM), \
-        "add form is not presented"
+            "add form is not presented"
 
     def add_to_basket(self):
         add_button = self.browser.find_element(
@@ -14,10 +14,10 @@ class ProductPage(BasePage):
 
     def should_be_message_about_add(self):
         self.is_element_present(*ProductPageLocators.PRODUCT_NAME), \
-        "product name is not presented"
+            "product name is not presented"
 
         self.is_element_present(*ProductPageLocators.MESSAGE_ABOUT_ADD), \
-        "message is not presented"
+            "message is not presented"
 
         product_name = self.browser.find_element(
             *ProductPageLocators.PRODUCT_NAME).text
@@ -29,10 +29,10 @@ class ProductPage(BasePage):
 
     def should_be_price(self):
         self.is_element_present(*ProductPageLocators.PRICE), \
-        "price is not presented"
+            "price is not presented"
 
         self.is_element_present(*ProductPageLocators.BASKET_TOTAL), \
-        "basket total price is not presented"
+            "basket total price is not presented"
 
         price_on_add_form = self.browser.find_element(
             *ProductPageLocators.PRICE).text
